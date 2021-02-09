@@ -1,11 +1,11 @@
 const cssnano = require('cssnano');
 
 module.exports = {
-    plugins: {
-      tailwindcss: {},
-      cssnano({
-          preset: 'default',
-      }),
-      autoprefixer: {},
-    }
-  }
+	plugins: [
+		require('tailwindcss'),
+		cssnano({
+			preset: 'default',
+		}),
+		require('autoprefixer'),
+	],
+};
